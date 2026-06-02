@@ -10,7 +10,6 @@ import InteractiveFAQ from "@/components/habit/InteractiveFAQ";
 import ContactForm from "@/components/habit/ContactForm";
 import Footer from "@/components/habit/Footer";
 import WhatsAppButton from "@/components/habit/WhatsAppButton";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
@@ -41,11 +40,6 @@ const Index = () => {
 
       {/* Floating WhatsApp Button */}
       <WhatsAppButton />
-
-      {/* Made with Dyad Badge */}
-      <div className="bg-[#1a1b1d] py-4 border-t border-white/5">
-        <MadeWithDyad />
-      </div>
     </div>
   );
 };
