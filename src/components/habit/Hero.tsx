@@ -13,11 +13,12 @@ export default function Hero() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-40 scale-105 transition-transform duration-1000"
+          preload="auto"
+          className="w-full h-full object-cover opacity-30 scale-105 transition-transform duration-1000"
           poster="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
         >
           <source
-            src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27d2ad6cf71d4d2c53e5498556c2b0d714c6190&profile_id=165&oauth2_token_id=57447761"
+            src="https://assets.mixkit.co/videos/preview/mixkit-modern-apartment-buildings-with-green-trees-41658-large.mp4"
             type="video/mp4"
           />
           Seu navegador não suporta vídeos.
