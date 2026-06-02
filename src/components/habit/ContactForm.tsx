@@ -17,11 +17,28 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitted(true);
-      showSuccess("Proposta solicitada com sucesso! Entraremos em contato em breve.");
-    }, 800);
+
+    // WhatsApp configuration
+    const phoneNumber = "5511999998888"; // Mesmo número do botão flutuante
+    
+    // Format structured message
+    const formattedMessage = `Olá! Gostaria de solicitar uma proposta comercial para o meu condomínio.
+
+*Dados da Solicitação:*
+• *Nome:* ${formData.name}
+• *E-mail:* ${formData.email}
+• *Telefone:* ${formData.phone}
+• *Condomínio:* ${formData.condoName}
+• *Número de Unidades:* ${formData.units}
+• *Mensagem:* ${formData.message || "Nenhuma mensagem adicional."}`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedMessage)}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
+
+    setIsSubmitted(true);
+    showSuccess("Proposta gerada! Redirecionando para o WhatsApp...");
   };
 
   return (
@@ -41,7 +58,7 @@ export default function ContactForm() {
                 Pronto para valorizar seu condomínio?
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Solicite uma proposta personalizada sem compromisso. Nossa equipe de especialistas está pronta para apresentar as melhores soluções para a sua gestão.
+                Preencha os dados ao lado para gerar sua proposta personalizada. Ao clicar em enviar, você será redirecionado para o nosso WhatsApp com todas as informações estruturadas.
               </p>
             </div>
 
@@ -91,16 +108,36 @@ export default function ContactForm() {
                   <div className="inline-flex items-center justify-center bg-emerald-500/10 p-4 rounded-full text-emerald-400">
                     <CheckCircle className="h-16 w-16" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Mensagem Enviada!</h3>
+                  <h3 className="text-2xl font-bold text-white">Redirecionando!</h3>
                   <p className="text-gray-300 max-w-md mx-auto">
-                    Agradecemos o contato. Um de nossos especialistas em gestão condominial entrará em contato nas próximas horas.
+                    Sua solicitação foi formatada com sucesso. Caso a janela do WhatsApp não tenha aberto automaticamente, clique no botão abaixo para enviar.
                   </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="text-[#f8b62e] hover:underline font-semibold text-sm"
-                  >
-                    Enviar outra mensagem
-                  </button>
+                  <div className="flex flex-col gap-3 items-center">
+                    <button
+                      onClick={() => {
+                        const phoneNumber = "5511999998888";
+                        const formattedMessage = `Olá! Gostaria de solicitar uma proposta comercial para o meu condomínio.
+
+*Dados da Solicitação:*
+• *Nome:* ${formData.name}
+• *E-mail:* ${formData.email}
+• *Telefone:* ${formData.phone}
+• *Condomínio:* ${formData.condoName}
+• *Número de Unidades:* ${formData.units}
+• *Mensagem:* ${formData.message || "Nenhuma mensagem adicional."}`;
+                        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedMessage)}`, "_blank");
+                      }}
+                      className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-6 py-3 rounded-xl transition-all flex items-center gap-2"
+                    >
+                      Abrir WhatsApp Manualmente
+                    </button>
+                    <button
+                      onClick={() => setIsSubmitted(false)}
+                      className="text-[#f8b62e] hover:underline font-semibold text-sm mt-2"
+                    >
+                      Preencher formulário novamente
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6 text-left">
