@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight, Building, Shield, Heart, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Building, Shield, Heart } from "lucide-react";
 
 interface Slide {
   id: number;
@@ -36,7 +36,7 @@ export default function CarouselSection() {
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1576085898323-218337e3343c?auto=format&fit=crop&w=1200&q=80",
+      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80",
       title: "Convivência Harmoniosa e Lazer",
       subtitle: "Gestão eficiente de áreas comuns e mediação profissional de conflitos para um ambiente feliz.",
       badge: "Harmonia",
