@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle -->
+  <rect width="32" height="32" rx="8" fill="#222325"/>
+  <!-- Stylized 'H' that resembles a building/structure -->
+  <path d="M9 8V24M23 8V24M9 16H23" stroke="#f8b62e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Subtle roof/condo detail on top -->
+  <path d="M13 6L16 3L19 6" stroke="#f8b62e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
