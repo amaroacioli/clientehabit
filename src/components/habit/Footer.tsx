@@ -18,7 +18,7 @@ export default function Footer() {
               <img 
                 src="/logo.png" 
                 alt="Habit Administradora de Condomínios" 
-                className="h-10 w-auto object-contain"
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </a>
             <p className="text-gray-400 text-sm font-light leading-relaxed">
