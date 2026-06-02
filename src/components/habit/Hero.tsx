@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto px-6 py-20 text-center relative z-10 space-y-10">
         {/* Minimalist Badge */}
         <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs tracking-widest uppercase text-gray-400">
-          <span>Administração Condominial de Alto Padrão</span>
+          <span>Administração Condominial de Excelência</span>
         </div>
 
         {/* Main Heading */}
