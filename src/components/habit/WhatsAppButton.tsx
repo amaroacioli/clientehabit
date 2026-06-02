@@ -4,7 +4,7 @@ import React from "react";
 import { MessageSquare } from "lucide-react";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "5511999998888"; // Número de exemplo
+  const phoneNumber = "554197747790"; // Número oficial da Habit
   const message = encodeURIComponent("Olá! Gostaria de solicitar uma proposta para o meu condomínio.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

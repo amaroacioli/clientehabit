@@ -19,7 +19,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     // WhatsApp configuration
-    const phoneNumber = "5511999998888"; // Mesmo número do botão flutuante
+    const phoneNumber = "554197747790"; // Número oficial da Habit
     
     // Format structured message
     const formattedMessage = `Olá! Gostaria de solicitar uma proposta comercial para o meu condomínio.
@@ -44,57 +44,54 @@ export default function ContactForm() {
   return (
     <section id="contato" className="py-24 bg-[#222325] relative overflow-hidden">
       {/* Decorative background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#f8b62e]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#f8b62e]/3 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column - Contact Info */}
           <div className="lg:col-span-5 space-y-8 text-left">
             <div className="space-y-4">
-              <span className="text-[#f8b62e] font-bold tracking-wider uppercase text-sm">
+              <span className="text-[#f8b62e] font-bold tracking-wider uppercase text-xs">
                 Contato
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+              <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight">
                 Pronto para valorizar seu condomínio?
               </h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-gray-400 text-base font-light leading-relaxed">
                 Preencha os dados ao lado para gerar sua proposta personalizada. Ao clicar em enviar, você será redirecionado para o nosso WhatsApp com todas as informações estruturadas.
               </p>
             </div>
 
-            <div className="space-y-6 pt-4">
+            <div className="space-y-6 pt-4 border-t border-white/5">
               <div className="flex items-start gap-4">
-                <div className="bg-[#f8b62e]/10 p-3 rounded-xl text-[#f8b62e]">
-                  <Phone className="h-6 w-6" />
+                <div className="bg-white/5 p-3 rounded-xl text-[#f8b62e] border border-white/5">
+                  <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white">Telefone / WhatsApp</h4>
-                  <p className="text-gray-400 text-sm mt-1">(11) 99999-8888</p>
-                  <p className="text-gray-400 text-sm">(11) 3333-4444</p>
+                  <h4 className="font-medium text-white text-sm">Telefone / WhatsApp</h4>
+                  <p className="text-gray-400 text-sm mt-1">+55 41 9774-7790</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-[#f8b62e]/10 p-3 rounded-xl text-[#f8b62e]">
-                  <Mail className="h-6 w-6" />
+                <div className="bg-white/5 p-3 rounded-xl text-[#f8b62e] border border-white/5">
+                  <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white">E-mail</h4>
+                  <h4 className="font-medium text-white text-sm">E-mail</h4>
                   <p className="text-gray-400 text-sm mt-1">contato@habitcondominios.com.br</p>
-                  <p className="text-gray-400 text-sm">comercial@habitcondominios.com.br</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-[#f8b62e]/10 p-3 rounded-xl text-[#f8b62e]">
-                  <MapPin className="h-6 w-6" />
+                <div className="bg-white/5 p-3 rounded-xl text-[#f8b62e] border border-white/5">
+                  <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white">Endereço</h4>
+                  <h4 className="font-medium text-white text-sm">Endereço</h4>
                   <p className="text-gray-400 text-sm mt-1">
-                    Av. Paulista, 1000 - Bela Vista
+                    Curitiba - PR
                   </p>
-                  <p className="text-gray-400 text-sm">São Paulo - SP, 01310-100</p>
                 </div>
               </div>
             </div>
@@ -102,20 +99,20 @@ export default function ContactForm() {
 
           {/* Right Column - Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#2d2e31] p-8 sm:p-10 rounded-3xl border border-white/5 shadow-2xl relative">
+            <div className="bg-[#2d2e31] p-8 sm:p-10 rounded-3xl border border-white/5 shadow-xl relative">
               {isSubmitted ? (
                 <div className="py-12 text-center space-y-6 animate-in fade-in zoom-in duration-500">
                   <div className="inline-flex items-center justify-center bg-emerald-500/10 p-4 rounded-full text-emerald-400">
                     <CheckCircle className="h-16 w-16" />
                   </div>
                   <h3 className="text-2xl font-bold text-white">Redirecionando!</h3>
-                  <p className="text-gray-300 max-w-md mx-auto">
+                  <p className="text-gray-300 max-w-md mx-auto font-light">
                     Sua solicitação foi formatada com sucesso. Caso a janela do WhatsApp não tenha aberto automaticamente, clique no botão abaixo para enviar.
                   </p>
                   <div className="flex flex-col gap-3 items-center">
                     <button
                       onClick={() => {
-                        const phoneNumber = "5511999998888";
+                        const phoneNumber = "554197747790";
                         const formattedMessage = `Olá! Gostaria de solicitar uma proposta comercial para o meu condomínio.
 
 *Dados da Solicitação:*
@@ -143,7 +140,7 @@ export default function ContactForm() {
                 <form onSubmit={handleSubmit} className="space-y-6 text-left">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                      <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                         Seu Nome
                       </label>
                       <input
@@ -152,13 +149,13 @@ export default function ContactForm() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Ex: João Silva"
-                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
+                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
-                        E-mail Corporativo / Pessoal
+                      <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
+                        E-mail
                       </label>
                       <input
                         type="email"
@@ -166,14 +163,14 @@ export default function ContactForm() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="Ex: joao@email.com"
-                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
+                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                      <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                         Telefone / WhatsApp
                       </label>
                       <input
@@ -181,13 +178,13 @@ export default function ContactForm() {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="Ex: (11) 99999-9999"
-                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
+                        placeholder="Ex: (41) 99999-9999"
+                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                      <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                         Nome do Condomínio
                       </label>
                       <input
@@ -196,13 +193,13 @@ export default function ContactForm() {
                         value={formData.condoName}
                         onChange={(e) => setFormData({ ...formData, condoName: e.target.value })}
                         placeholder="Ex: Edifício Bella Vista"
-                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
+                        className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                    <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                       Quantidade de Unidades (Apartamentos/Casas)
                     </label>
                     <input
@@ -211,12 +208,12 @@ export default function ContactForm() {
                       value={formData.units}
                       onChange={(e) => setFormData({ ...formData, units: e.target.value })}
                       placeholder="Ex: 48"
-                      className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
+                      className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                    <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                       Mensagem / Observações adicionais
                     </label>
                     <textarea
@@ -224,16 +221,16 @@ export default function ContactForm() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Conte-nos um pouco sobre as necessidades atuais do seu condomínio..."
-                      className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all resize-none"
+                      className="w-full bg-[#222325] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:border-[#f8b62e] focus:ring-1 focus:ring-[#f8b62e] outline-none transition-all resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-[#f8b62e] hover:bg-[#e0a120] text-[#222325] font-bold py-4 rounded-xl transition-all duration-300 hover:shadow-[0_0_20px_rgba(248,182,46,0.4)] flex items-center justify-center gap-2"
+                    className="w-full bg-[#f8b62e] hover:bg-[#e0a120] text-[#222325] font-bold py-4 rounded-xl transition-all duration-300 hover:shadow-[0_0_20px_rgba(248,182,46,0.4)] flex items-center justify-center gap-2 text-sm uppercase tracking-wider"
                   >
                     Solicitar Proposta Comercial
-                    <Send className="h-5 w-5" />
+                    <Send className="h-4 w-4" />
                   </button>
                 </form>
               )}

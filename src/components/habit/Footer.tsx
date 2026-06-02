@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Building2, Facebook, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { Facebook, Instagram, Linkedin, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -15,14 +15,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <a href="#" className="flex items-center gap-2">
-              <div className="bg-[#f8b62e] p-2 rounded-xl">
-                <Building2 className="h-6 w-6 text-[#222325]" />
-              </div>
-              <span className="text-2xl font-extrabold tracking-tight text-white">
-                HABIT<span className="text-[#f8b62e]">.</span>
-              </span>
+              <img 
+                src="/logo.png" 
+                alt="Habit Administradora de Condomínios" 
+                className="h-10 w-auto object-contain"
+              />
             </a>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm font-light leading-relaxed">
               Especialistas em administração de condomínios. Gestão eficiente, transparente e soluções práticas para o dia a dia dos moradores.
             </p>
             <div className="flex gap-4">
@@ -40,8 +39,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold text-lg">Links Rápidos</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-white font-medium text-sm uppercase tracking-wider">Links Rápidos</h4>
+            <ul className="space-y-3 text-sm font-light">
               <li>
                 <a href="#sobre" className="text-gray-400 hover:text-[#f8b62e] transition-colors">
                   Sobre Nós
@@ -67,8 +66,8 @@ export default function Footer() {
 
           {/* Services Links */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold text-lg">Serviços</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-white font-medium text-sm uppercase tracking-wider">Serviços</h4>
+            <ul className="space-y-3 text-sm font-light">
               <li>
                 <a href="#servicos" className="text-gray-400 hover:text-[#f8b62e] transition-colors">
                   Gestão Financeira
@@ -94,13 +93,13 @@ export default function Footer() {
 
           {/* Newsletter / CTA */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold text-lg">Fale Conosco</h4>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <h4 className="text-white font-medium text-sm uppercase tracking-wider">Fale Conosco</h4>
+            <p className="text-gray-400 text-sm font-light leading-relaxed">
               Entre em contato para agendar uma reunião ou solicitar uma visita técnica ao seu condomínio.
             </p>
             <a
               href="#contato"
-              className="inline-block bg-[#f8b62e] hover:bg-[#e0a120] text-[#222325] font-bold px-6 py-3 rounded-full text-sm transition-all duration-300 hover:shadow-[0_0_15px_rgba(248,182,46,0.3)]"
+              className="inline-block bg-[#f8b62e] hover:bg-[#e0a120] text-[#222325] font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(248,182,46,0.3)]"
             >
               Solicitar Visita
             </a>
@@ -109,8 +108,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-xs text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Habit Condomínios. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
+          <p className="text-gray-500 text-xs text-center sm:text-left font-light">
+            &copy; {new Date().getFullYear()} Habit Condomínios. Todos os direitos reservados. CNPJ: 03.552.991/0001-03
           </p>
           <button
             onClick={scrollToTop}

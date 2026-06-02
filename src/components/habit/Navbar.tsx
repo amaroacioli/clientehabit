@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Building2, Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,40 +23,41 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#222325]/95 backdrop-blur-md py-4 shadow-lg border-b border-white/5"
+          ? "bg-[#222325]/95 backdrop-blur-md py-4 shadow-sm border-b border-white/5"
           : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo Oficial */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="bg-[#f8b62e] p-2 rounded-xl transition-transform duration-300 group-hover:scale-110">
-            <Building2 className="h-6 w-6 text-[#222325]" />
-          </div>
-          <span className="text-2xl font-extrabold tracking-tight text-white">
-            HABIT<span className="text-[#f8b62e]">.</span>
-          </span>
+          <img 
+            src="/logo.png" 
+            alt="Habit Administradora de Condomínios" 
+            className="h-10 w-auto object-contain brightness-100 transition-transform duration-300 group-hover:scale-102"
+          />
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#sobre" className="text-gray-300 hover:text-[#f8b62e] transition-colors font-medium">
+          <a href="#sobre" className="text-gray-300 hover:text-[#f8b62e] transition-colors text-sm font-medium tracking-wide">
             Sobre Nós
           </a>
-          <a href="#servicos" className="text-gray-300 hover:text-[#f8b62e] transition-colors font-medium">
+          <a href="#servicos" className="text-gray-300 hover:text-[#f8b62e] transition-colors text-sm font-medium tracking-wide">
             Serviços
           </a>
-          <a href="#galeria" className="text-gray-300 hover:text-[#f8b62e] transition-colors font-medium">
+          <a href="#galeria" className="text-gray-300 hover:text-[#f8b62e] transition-colors text-sm font-medium tracking-wide">
             Diferenciais
           </a>
-          <a href="#faq" className="text-gray-300 hover:text-[#f8b62e] transition-colors font-medium">
+          <a href="#faq" className="text-gray-300 hover:text-[#f8b62e] transition-colors text-sm font-medium tracking-wide">
             Dúvidas
           </a>
           <a
-            href="#contato"
-            className="bg-[#f8b62e] hover:bg-[#e0a120] text-[#222325] font-bold px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(248,182,46,0.4)] flex items-center gap-2"
+            href="https://wa.me/554197747790?text=Olá! Gostaria de solicitar uma proposta para o meu condomínio."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#f8b62e] hover:bg-[#e0a120] text-[#222325] font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-all duration-300 flex items-center gap-2"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-3.5 w-3.5" />
             Fale Conosco
           </a>
         </div>
@@ -76,35 +77,36 @@ export default function Navbar() {
           <a
             href="#sobre"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 font-medium"
+            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 text-sm font-medium"
           >
             Sobre Nós
           </a>
           <a
             href="#servicos"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 font-medium"
+            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 text-sm font-medium"
           >
             Serviços
           </a>
           <a
             href="#galeria"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 font-medium"
+            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 text-sm font-medium"
           >
             Diferenciais
           </a>
           <a
             href="#faq"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 font-medium"
+            className="text-gray-300 hover:text-[#f8b62e] py-2 border-b border-white/5 text-sm font-medium"
           >
             Dúvidas
           </a>
           <a
-            href="#contato"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-[#f8b62e] text-[#222325] font-bold py-3 rounded-full text-center transition-colors hover:bg-[#e0a120] flex items-center justify-center gap-2"
+            href="https://wa.me/554197747790?text=Olá! Gostaria de solicitar uma proposta para o meu condomínio."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#f8b62e] text-[#222325] font-bold py-3 rounded-full text-center transition-colors hover:bg-[#e0a120] flex items-center justify-center gap-2 text-xs uppercase tracking-wider"
           >
             <Phone className="h-4 w-4" />
             Fale Conosco
