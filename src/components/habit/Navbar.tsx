@@ -23,17 +23,17 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#222325]/95 backdrop-blur-md py-3 shadow-sm border-b border-white/5"
-          : "bg-transparent py-5"
+          ? "bg-[#222325]/95 backdrop-blur-md py-2 shadow-sm border-b border-white/5"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo Oficial */}
+        {/* Logo Oficial Ampliada */}
         <a href="#" className="flex items-center gap-2 group">
           <img 
             src="/logo.png" 
             alt="Habit Administradora de Condomínios" 
-            className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-20 sm:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </a>
 

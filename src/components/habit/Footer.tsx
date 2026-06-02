@@ -14,11 +14,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
           {/* Brand Column */}
           <div className="space-y-6">
+            {/* Logo Oficial Ampliada */}
             <a href="#" className="flex items-center gap-2">
               <img 
                 src="/logo.png" 
                 alt="Habit Administradora de Condomínios" 
-                className="h-14 sm:h-16 w-auto object-contain"
+                className="h-24 sm:h-28 w-auto object-contain"
               />
             </a>
             <p className="text-gray-400 text-sm font-light leading-relaxed">
